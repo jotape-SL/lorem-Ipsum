@@ -7,6 +7,14 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     let amount = parseInt(count);
+    if (count <= 0) {
+      amount = 1;
+      alert('Bro we cant go negative on the paragraphs cmon');
+    }
+    if (count > 8) {
+      amount = 8;
+      alert('Sorry the max i can display is 8 paragraphs');
+    }
     setText(data.slice(0, amount));
   };
   return (
